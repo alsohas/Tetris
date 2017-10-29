@@ -1,0 +1,35 @@
+package view;
+
+import java.awt.EventQueue;
+
+/**
+ * @author Abdullah
+ * @version 3/1/2016
+ */
+public final class TetrisMain {
+
+    /**
+     * Empty constructor for main.
+     */
+    private TetrisMain() {
+        //Do nothing.
+    } 
+    
+    /**
+     * @param theArgs Command line stuff.
+     */
+    public static void main(final String... theArgs) {
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    new Tetris();
+                
+                } catch (final Exception e) {
+                    e.printStackTrace();
+                }     
+            }
+        });
+    }
+
+}
